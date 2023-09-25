@@ -19,6 +19,8 @@ const destContract = MessageReceiverFactory.connect(
 );
 
 export async function sendMessageToAvalanche(message: string) {
+  console.log(srcChain);
+  console.log(destChain);
   const tx = await sourceContract.sendMessage(
     destChain.name,
     destChain.callContract,
